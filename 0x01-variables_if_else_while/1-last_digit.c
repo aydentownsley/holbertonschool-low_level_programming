@@ -3,11 +3,10 @@
 #include <stdio.h>
 
 /**
- * main - function gets last digit of number and decides how big
+ * main - function prints a number and decides size
  *
- * Return: 0 if succesful
+ * Return: 0 if successful
  */
-
 int main(void)
 {
 	int n;
@@ -17,13 +16,11 @@ int main(void)
 	n = rand() - RAND_MAX / 2;
 
 	if (nth > 5)
-		printf("Last digit of %d is %d and is greater than 5", n, nth);
+		printf("Last digit of %d is %d and is greater than 5\n", n, nth);
 	if (nth == 0)
-		printf("Last digit of %d is %d and is 0", n, nth);
+		printf("Last digit of %d is %d and is 0\n", n, nth);
 	if (nth < 6 && nth != 0)
-		printf("Last digit of %d is %d and is less than 6 and not 0", n, nth);
-
-	printf("\n");
+		printf("Last digit of %d is %d and is less than 6 and not 0\n", n, nth);
 
 	return (0);
 }
