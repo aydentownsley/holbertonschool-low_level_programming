@@ -7,9 +7,9 @@
  */
 int main(void)
 {
-	int n;
-	int m;
-	int p;
+	int n; //num1
+	int m; //num2
+	int p; //count
 
 	p = 49;
 	m = 48;
