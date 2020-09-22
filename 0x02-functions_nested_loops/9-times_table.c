@@ -29,7 +29,7 @@ void times_table(void)
 			} else
 			{
 				_putchar(tens + 48);
-                                _putchar(ones + 48);
+				_putchar(ones + 48);
 			}
 
 			if (m < 9)
