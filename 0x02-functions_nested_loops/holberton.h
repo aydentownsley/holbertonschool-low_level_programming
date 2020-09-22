@@ -13,4 +13,6 @@ void print_alphabet_x10(void);
 /* this prototype has to be declated in a header file */
 int _islower(int c);
 
+/* this prototype has to be declated in a header file */
+int _isalpha(int c);
 #endif /* _HEADER_H_ */
