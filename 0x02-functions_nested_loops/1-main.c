@@ -1,4 +1,4 @@
-#include "header.h"
+#include "holberton.h"
 
 /**
  * main - runs the prototype functions
