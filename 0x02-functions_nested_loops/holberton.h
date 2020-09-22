@@ -25,4 +25,6 @@ int _abs(int);
 /* this prototype has to be declated in a header file */
 int print_last_digit(int);
 
+/* this prototype has to be declated in a header file */
+void jack_bauer(void);
 #endif /* _HEADER_H_ */
