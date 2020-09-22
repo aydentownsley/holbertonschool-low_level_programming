@@ -19,4 +19,6 @@ int _isalpha(int c);
 /* this prototype has to be declated in a header file */
 int print_sign(int n);
 
+/* this prototype has to be declated in a header file */
+int _abs(int);
 #endif /* _HEADER_H_ */
