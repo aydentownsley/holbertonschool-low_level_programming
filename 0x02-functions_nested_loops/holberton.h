@@ -15,4 +15,8 @@ int _islower(int c);
 
 /* this prototype has to be declated in a header file */
 int _isalpha(int c);
+
+/* this prototype has to be declated in a header file */
+int print_sign(int n);
+
 #endif /* _HEADER_H_ */
