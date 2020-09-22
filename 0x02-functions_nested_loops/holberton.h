@@ -21,4 +21,8 @@ int print_sign(int n);
 
 /* this prototype has to be declated in a header file */
 int _abs(int);
+
+/* this prototype has to be declated in a header file */
+int print_last_digit(int);
+
 #endif /* _HEADER_H_ */
