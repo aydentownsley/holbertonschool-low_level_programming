@@ -33,4 +33,7 @@ void times_table(void);
 
 /** this prototype has to be declared in a header file */
 int add(int, int);
+
+/** this prototype has to be declared in a header file */
+void print_to_98(int);
 #endif /* _HEADER_H_ */
