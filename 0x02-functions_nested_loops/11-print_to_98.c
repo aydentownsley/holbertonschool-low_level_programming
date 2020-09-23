@@ -9,6 +9,7 @@
 void print_to_98(int n)
 {
 	int start;
+
 	start = n;
 
 	if (start <= 98)
@@ -28,11 +29,11 @@ void print_to_98(int n)
 		for (start = n; start >= 98; start--)
 		{
 			if (start == 98)
-                        {
-                                printf("%d", start);
-                                break;
-                        }
-                        printf("%d, ", start);
+			{
+				printf("%d", start);
+				break;
+			}
+			printf("%d, ", start);
 		}
 	}
 	putchar(10);
