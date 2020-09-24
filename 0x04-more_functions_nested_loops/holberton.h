@@ -1,19 +1,22 @@
 #ifndef _HOLBERTON_H_
 #define _HOLBERTON_H_
 
-/* prototype of _isupper function */
+/* this prototype has to be declared in a header file */
 int _isupper(int);
 
-/* prototype of _isdigit function */
+/* this prototype has to be declared in a header file */
 int _isdigit(int);
 
-/* prototype of mul function */
+/* this prototype has to be declared in a header file */
 int mul(int, int);
 
-/* prototype of _putchar function */
+/* this prototype has to be declared in a header file */
 int _putchar(char);
 
-/* prototype of print_numbers function */
+/* this prototype has to be declared in a header file */
 void print_numbers(void);
+
+/* this prototype has to be declared in a header file */
+void print_most_numbers(void);
 
 #endif /* _HOLBERTON_H_ */
