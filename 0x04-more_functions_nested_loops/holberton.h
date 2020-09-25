@@ -19,4 +19,19 @@ void print_numbers(void);
 /* this prototype has to be declared in a header file */
 void print_most_numbers(void);
 
+/* this prototype has to be declared in a header file */
+void more_numbers(void);
+
+ /* this prototype has to be declared in a header file */
+void print_line(int);
+
+ /* this prototype has to be declared in a header file */
+void print_diagonal(int);
+
+/* this prototype has to be declared in a header file */
+void print_square(int);
+
+/* this prototype has to be declared in a header file */
+void print_triangle(int);
+
 #endif /* _HOLBERTON_H_ */
