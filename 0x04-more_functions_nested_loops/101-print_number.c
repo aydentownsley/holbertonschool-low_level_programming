@@ -1,7 +1,7 @@
 #include "holberton.h"
 
 /**
- * print_numf (n < 0)
+ * print_number - prints int using putchar
  * @n: input int
  * Return: void
  */
@@ -10,7 +10,7 @@ void print_number(int n)
 	int tmp1;
 	int tmp2;
 	int tmp3;
-	
+
 	tmp2 = 0;
 	tmp3 = 0;
 
