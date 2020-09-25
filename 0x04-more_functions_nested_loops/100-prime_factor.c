@@ -8,23 +8,29 @@
 
 int main(void)
 {
-	long num1;
+	long n;
+	long div;
 	long lfact;
-	long tmp;
 
-	lfact = 2;
-	
-	for (num1 = 1; num1 < 612852475142 / 2; num1++)
+	n = 612852475143;
+	div = 2;
+
+	while(n != 0)
 	{
-		if (612852475143 % num1 == 0)
+		if (n % div != 0)
 		{
-			tmp = 612852475143 / num1;	
-			if (tmp > lfact)
-				lfact = tmp;
+			div++;
+		}
+		else
+		{
+			lfact = n;
+			n = n / div;
+			if (n == 1)
+			{
+				printf("%ld\n", lfact);
+				break;
+			}
 		}
 	}
-
-	printf("%ld", lfact);
-
 	return (0);
 }
