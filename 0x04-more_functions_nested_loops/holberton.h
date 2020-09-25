@@ -34,4 +34,6 @@ void print_square(int);
 /* this prototype has to be declared in a header file */
 void print_triangle(int);
 
+/* this prototype has to be declared in a header file */
+void print_number(int);
 #endif /* _HOLBERTON_H_ */
