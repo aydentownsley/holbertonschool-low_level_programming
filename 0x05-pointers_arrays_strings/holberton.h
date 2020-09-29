@@ -31,4 +31,7 @@ void puts_half(char *);
 /* This is a prototype of a function that prints and array from point n */
 void print_array(int *, int);
 
+/* This is a prototype of a function that copies a string to another array */
+char *_strcpy(char *, char *);
+
 #endif /*_HOLBERTON_H_*/
