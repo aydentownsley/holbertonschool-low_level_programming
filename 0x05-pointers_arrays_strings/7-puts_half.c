@@ -29,7 +29,7 @@ void puts_half(char *str)
 		}
 		else
 		{
-			if (n > (len / 2) - 1)
+			if (n > (len - 1) / 2)
 				_putchar(str[n]);
 		}
 	}
