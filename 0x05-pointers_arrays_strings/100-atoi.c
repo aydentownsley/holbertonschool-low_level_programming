@@ -21,7 +21,7 @@ int _atoi(char *s)
 		}
 		else if (s[len] == 45)
 		{
-			sign *= 1;
+			sign *= -1;
 		}
 		else if ((s[len] < 48 || s[len] > 57) && tmp == 0)
 		{
