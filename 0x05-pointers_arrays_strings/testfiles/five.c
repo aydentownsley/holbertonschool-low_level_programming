@@ -1,9 +1,9 @@
 #include "holberton.h"
 
 /**
- * rev_string - reverses a string
+ * five -
  *
- * @s: input pointer to string
+ * @s:
  *
  * Return: void
  */
@@ -12,7 +12,7 @@ void rev_string(char *s)
 {
 	int len;
 	int m;
-	char tmp;
+	int tmp;
 
 	len = 0;
 
@@ -21,9 +21,7 @@ void rev_string(char *s)
 		len++;
 	}
 
-	len--;
-	
-	for (m = 0; m <= len; m++, len--)
+	for (m = 0; m <= len - 1; m++, len--)
 	{
 		tmp = s[m];
 		s[m] = s[len];

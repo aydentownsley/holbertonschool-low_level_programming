@@ -34,4 +34,7 @@ void print_array(int *, int);
 /* This is a prototype of a function that copies a string to another array */
 char *_strcpy(char *, char *);
 
+/* This is the prototype of _atoi */
+int _atoi(char *);
+
 #endif /*_HOLBERTON_H_*/
