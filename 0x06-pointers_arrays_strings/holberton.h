@@ -28,4 +28,7 @@ char *cap_string(char *);
 /* Prototype of leet */
 char *leet(char *);
 
+/* Prototype of 9 */
+void print_number(int);
+
 #endif /*_HOLBERTON_H_*/
