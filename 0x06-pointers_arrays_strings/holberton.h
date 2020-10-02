@@ -31,4 +31,7 @@ char *leet(char *);
 /* Prototype of 9 */
 void print_number(int);
 
+/* Prototype of rot13 translate function */
+char *rot13(char *);
+
 #endif /*_HOLBERTON_H_*/

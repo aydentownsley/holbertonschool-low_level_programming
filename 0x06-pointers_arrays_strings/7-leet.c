@@ -11,21 +11,18 @@
 char *leet(char *s)
 {
 	int i = 0;
+	int n = 0;
+	char lt[] = "a4A4e3E3o0O0t7T7l1L1"
 
 	for (i = 0; s[i] != '\0'; i++)
 	{
-		if (s[i] == 'A' || s[i] == 'a')
-			s[i] = 52;
-		else if (s[i] == 'E' || s[i] == 'e')
-			s[i] = 51;
-		else if (s[i] == 'O' || s[i] == 'o')
-			s[i] = 48;
-		else if (s[i] == 'T' || s[i] == 't')
-			s[i] = 55;
-		else if (s[i] == 'L' || s[i] == 'l')
-			s[i] = 49;
-		else
-			continue;
+		for (n = 0; lt[n] != '\0'; n++)
+		{
+			if (s[i] == lt[n])
+			{
+				
+			}
+		}
 	}
 
 	return (s);
