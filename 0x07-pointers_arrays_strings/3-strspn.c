@@ -7,7 +7,7 @@
  * @s: pointer to string
  * @accept: array of bytes to check s against
  *
- * Return: 
+ * Return: count pointing to match
  */
 
 unsigned int _strspn(char *s, char *accept)
