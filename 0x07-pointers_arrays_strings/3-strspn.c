@@ -26,7 +26,7 @@ unsigned int _strspn(char *s, char *accept)
 			i++;
 			k = 0;
 		}
-		else if (accept[k] == '\0')
+		else if (accept[k] == '\0' || s[i] == '\0')
 			break;
 	}
 	return (count);
