@@ -1,34 +1,27 @@
-#include <stdio.h>
 #include "holberton.h"
 
 /**
- * _strspn - gets length of prefix
+ * _strspn - function the get num of bytes of sub in main string
  *
- * @s: pointer to string
- * @accept: array of bytes to check s against
+ * @s: string
+ * @accept: string to be searched
  *
- * Return: count pointing to match
+ * Return: num of bytes
  */
 
 unsigned int _strspn(char *s, char *accept)
 {
-	int i;
-	int k = 0;
-	unsigned int count = 0;
+	unsigned int i, k;
 
-	while (s[i] != '\0')
+	for (i = 0; s[i]; i++)
 	{
-		if (s[i] != accept[k] && accept[k] != '\0')
-			k++;
-		else if (s[i] == accept[k])
+		for (k = 0; accept[k]; k++)
 		{
-			count++;
-			i++;
-			k = 0;
+			if (s[i] == accept[k])
+				break;
 		}
-		else if (accept[k] == '\0' || s[i] == '\0')
+		if (!accept[k])
 			break;
 	}
-	return (count);
+	return (i);
 }
-
