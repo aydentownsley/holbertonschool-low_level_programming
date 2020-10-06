@@ -12,7 +12,7 @@
 
 void print_diagsums(int *a, int size)
 {
-	int l, w, asum = 0, bsum = 0;
+	int l = 0, w = 0, asum = 0, bsum = 0;
 
 	while (l <= (size * size))
 	{
