@@ -1,4 +1,3 @@
-#include <stdlib.h>
 #include <stdio.h>
 
 char *_strstr(char *, char *);
@@ -11,7 +10,7 @@ char *_strstr(char *, char *);
 int main(void)
 {
 	char *s = "First, solve the problem. Then, write the code.";
-	char *f = "";
+	char *f = "solve";
 	char *t;
 
 	t = _strstr(s, f);

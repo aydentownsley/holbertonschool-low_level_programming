@@ -1,4 +1,3 @@
-#include <stdlib.h>
 #include <stdio.h>
 
 char *_strstr(char *, char *);
