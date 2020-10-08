@@ -9,18 +9,33 @@
  *
  */
 
-int plhlp(char *s2, int len)
+int plhlp(char *s2, int e, int b)
 {
-	if (s2[len] != '\0')
-		len++;
-
-	if (s2 == s2[len])
-		return (plhlp(*(s2 + 1), (s2[len - 1]);
-	else if ((s2 + 1) == '\0')
-		return (1);
-	else if (s2 != s2[len])
+	if (s2[b] == '\0')
+                return (1);	
+	else if (s2[b] == s2[e])
+		return (plhlp(s2, --e, ++b));
+	else
 		return (0);
 }
+
+/**
+ * _strlen - gets string length
+ *
+ * @s3: points to string
+ * @len: int that stores length
+ *
+ * Return: int len
+ */
+
+int _strlen(char *s3, int len)
+{
+	if (s3[len] == '\0')
+		return (len);
+
+	return (_strlen(s3, ++len));
+
+} 
 
 /**
  * is_palindrome - checks is a string is a palindrome
@@ -32,9 +47,12 @@ int plhlp(char *s2, int len)
 
 int is_palindrome(char *s)
 {
-	if ((s + 1) == '\0')
-		return (1);
-	else
-		return (plhlp(s, 0));
-		
+	int end = 0, begin = 0;
+
+	end = _strlen(s, end);
+
+	if (s == '\0')
+		return (0);
+	
+	return (plhlp(s, --end, begin));
 } 

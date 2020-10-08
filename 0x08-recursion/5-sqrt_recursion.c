@@ -17,6 +17,7 @@ int sqhlp(int n2, int m)
 		return (-1);
 	return (sqhlp(n2, m + 1));
 }
+
 /**
  * _sqrt_recursion - returns natural square root of n
  *

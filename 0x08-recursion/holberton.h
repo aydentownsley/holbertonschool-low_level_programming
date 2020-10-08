@@ -25,4 +25,7 @@ int _sqrt_recursion(int);
 /* Prototype of is_prime_number */
 int is_prime_number(int);
 
+/* Proto for is palindrome */
+int is_palindrome(char *);
+
 #endif /*_HOLBERTON_H_*/

@@ -1,4 +1,4 @@
-#include "holberton.h"
+void _puts_recursion(char *);
 
 /**
  * main - check the code for Holberton School students.
@@ -7,6 +7,6 @@
  */
 int main(void)
 {
-    _puts_recursion('\0');
-    return (0);
+	_puts_recursion("");
+	return (0);
 }
