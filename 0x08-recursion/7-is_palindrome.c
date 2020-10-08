@@ -9,14 +9,17 @@
  *
  */
 
-int plhlp(char *s2, char *e)
+int plhlp(char *s2, int len)
 {
-	if (*(e + 1) != '\0')
-		e++;
+	if (s2[len] != '\0')
+		len++;
 
-	if (s2 == e)
-		return (plphlp((s2 + 1), (e - 1));
-	else if (
+	if (s2 == s2[len])
+		return (plhlp(*(s2 + 1), (s2[len - 1]);
+	else if ((s2 + 1) == '\0')
+		return (1);
+	else if (s2 != s2[len])
+		return (0);
 }
 
 /**
@@ -29,9 +32,9 @@ int plhlp(char *s2, char *e)
 
 int is_palindrome(char *s)
 {
-	if ((s + 1) = '\0')
+	if ((s + 1) == '\0')
 		return (1);
 	else
-		return (plhlp(s, s));
+		return (plhlp(s, 0));
 		
 } 

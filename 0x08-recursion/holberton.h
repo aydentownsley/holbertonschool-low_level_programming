@@ -23,6 +23,9 @@ int _pow_recursion(int, int);
 int _sqrt_recursion(int);
 
 /* Prototype of is_prime_number */
-int is_prime_number(int n);
+int is_prime_number(int);
+
+/* Prototype of is_palindrome */
+int is_palindrome(char *)
 
 #endif /*_HOLBERTON_H_*/
