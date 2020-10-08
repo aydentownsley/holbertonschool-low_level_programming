@@ -19,4 +19,10 @@ int factorial(int);
 /* Prototype of _pow_recursion */
 int _pow_recursion(int, int);
 
+/* Prototype of _sqrt_recursion */
+int _sqrt_recursion(int);
+
+/* Prototype of is_prime_number */
+int is_prime_number(int n);
+
 #endif /*_HOLBERTON_H_*/
