@@ -7,6 +7,6 @@ void _puts_recursion(char *);
  */
 int main(void)
 {
-	_puts_recursion("");
+	_puts_recursion("Doug Dimmadome Owner of the Dougsdale Dimmadone");
 	return (0);
 }
