@@ -4,15 +4,16 @@
  * plhlp - allows iteration through string with two args
  *
  * @s2: s from main
- * @e: pointer that will
+ * @e: position value of the end of the string
+ * @b: position value of beginning of string
  *
- *
+ * Return: 1 if palindrome, 0 if not
  */
 
 int plhlp(char *s2, int e, int b)
 {
 	if (s2[b] == '\0')
-                return (1);	
+		return (1);
 	else if (s2[b] == s2[e])
 		return (plhlp(s2, --e, ++b));
 	else
@@ -35,7 +36,7 @@ int _strlen(char *s3, int len)
 
 	return (_strlen(s3, ++len));
 
-} 
+}
 
 /**
  * is_palindrome - checks is a string is a palindrome
@@ -53,6 +54,6 @@ int is_palindrome(char *s)
 
 	if (s == '\0')
 		return (0);
-	
+
 	return (plhlp(s, --end, begin));
-} 
+}
