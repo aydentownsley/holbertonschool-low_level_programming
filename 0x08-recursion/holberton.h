@@ -28,4 +28,7 @@ int is_prime_number(int);
 /* Proto for is palindrome */
 int is_palindrome(char *);
 
+/* Prototype of wilcmp */
+int wildcmp(char *, char *);
+
 #endif /*_HOLBERTON_H_*/
