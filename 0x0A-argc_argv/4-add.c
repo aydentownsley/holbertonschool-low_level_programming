@@ -43,6 +43,6 @@ int main(int argc, char *argv[])
 		printf("0\n");
 	else
 		printf("%d\n", sum);
-		
+
 	return (0);
 }
