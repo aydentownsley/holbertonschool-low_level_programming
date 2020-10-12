@@ -1,5 +1,6 @@
 #include "holberton.h"
 #include <stdio.h>
+# define UNUSED(x) (void)(x)
 
 /**
  * main - prints number of arguments
@@ -12,7 +13,7 @@
 
 int main(int argc, char *argv[])
 {
-	(void)argv;
+	UNUSED(argv);
 
 	printf("%d\n", argc);
 
