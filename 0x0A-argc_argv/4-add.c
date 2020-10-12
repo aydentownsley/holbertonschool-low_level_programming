@@ -15,13 +15,13 @@ int main(int argc, char *argv[])
 {
 	int sum = 0, i = 1, tmp = 0, check = 1;
 
-	for(; i < argc; i++)
+	for (; i < argc; i++)
 	{
 		check = isdigit(*argv[i]);
-		
+
 		if (*argv[i] < 0)
 		{
-			continue;		
+			continue;
 		}
 		else if (check == 0)
 		{
@@ -41,5 +41,5 @@ int main(int argc, char *argv[])
 	else
 		printf("%d\n", sum);
 
-	return (0);	
+	return (0);
 }

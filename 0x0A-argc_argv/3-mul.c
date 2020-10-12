@@ -5,8 +5,8 @@
 /**
  * main - multiplies two numbers
  *
- * @num1: first number
- * @num2: second number
+ * @argc: num of args
+ * @argv: pointer to array of args
  *
  * Return: 0 if success
  */

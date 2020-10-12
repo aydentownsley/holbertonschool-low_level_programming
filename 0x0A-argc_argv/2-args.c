@@ -4,8 +4,8 @@
 /**
  * main - prints all arguments recieved.
  *
- * @argc:
- * @argv:
+ * @argc: number of args
+ * @argv: pointer to args
  *
  * Return: 0 if success
  */

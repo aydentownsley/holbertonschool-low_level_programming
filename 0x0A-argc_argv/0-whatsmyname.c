@@ -2,7 +2,7 @@
 #include <stdio.h>
 #define UNUSED(x) (void)(x)
 
-/*
+/**
  * main - prints the name of the projects file
  *
  * @argc: number of arguments
