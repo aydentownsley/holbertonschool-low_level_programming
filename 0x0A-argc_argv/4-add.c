@@ -1,7 +1,7 @@
 #include "holberton.h"
 #include <stdio.h>
 #include <stdlib.h>
-
+#include <ctype.h>
 /**
  * main - adds positive numbers
  *
@@ -35,11 +35,14 @@ int main(int argc, char *argv[])
 	}
 
 	if (check == 0)
+	{
 		printf("Error\n");
+		return (1);
+	}
 	else if (argc == 1)
 		printf("0\n");
 	else
 		printf("%d\n", sum);
-
+		
 	return (0);
 }
