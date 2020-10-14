@@ -21,15 +21,14 @@ int **alloc_grid(int width, int height)
 	int h;
 	int i;
 
-	if ( height <= 0 || width <= 0)
+	if (height <= 0 || width <= 0)
 		return (NULL);
 
 	ar2d2 = (int **)malloc(width * height * sizeof(int));
 
 	if (ar2d2 == NULL)
 		return (NULL);
-	/* This for loop checks if the second level pointer is NULL and dealloc
-	 * memory if that is the case */
+	/* This for loop checks second level pointer NULL case */
 	for (i = 0; i < height; i++)
 	{
 		*(ar2d2 + i) = (int *)malloc(width * sizeof(int));
