@@ -19,4 +19,7 @@ int **alloc_grid(int, int);
 /* Proto of free grid */
 void free_grid(int **, int);
 
+/* Proto of argstostr */
+char *argstostr(int, char **);
+
 #endif /*_HOLBERTON_H_*/
