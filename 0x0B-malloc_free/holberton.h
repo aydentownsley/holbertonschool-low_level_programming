@@ -22,4 +22,7 @@ void free_grid(int **, int);
 /* Proto of argstostr */
 char *argstostr(int, char **);
 
+/* Proto of strtow */
+char **strtow(char *);
+
 #endif /*_HOLBERTON_H_*/
