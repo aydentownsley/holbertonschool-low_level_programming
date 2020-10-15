@@ -1,7 +1,24 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
 #include "holberton.h"
+
+/**
+ * _strlen - returns string length
+ *
+ * @st: string being passed
+ *
+ * Return: int of string length
+ */
+
+int _strlen(char *st)
+{
+	int a;
+
+	for (a = 0; st[a] != '\0'; a++)
+		;
+
+	return (a);
+}
 
 /**
  * string_nconcat - concatenates two strings
@@ -25,7 +42,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	if (s2 == NULL)
 		s2 = "";
 
-	p = malloc((strlen(s1) + strlen(s2) + 1));
+	p = malloc((_strlen(s1) + _strlen(s2) + 1));
 
 	if (!p)
 		return (NULL);
@@ -35,7 +52,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		p[i] = s1[i];
 	}
 
-	if (n > strlen(s2))
+	if ((int)n > _strlen(s2))
 	{
 		for (; s2[j] != '\0'; j++)
 		{
