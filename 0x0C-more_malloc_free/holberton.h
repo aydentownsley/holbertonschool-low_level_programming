@@ -10,4 +10,7 @@ void *malloc_checked(unsigned int);
 /* Proto of string_nconcat */
 char *string_nconcat(char *, char *, unsigned int);
 
+/* Proto of _calloc */
+void *_calloc(unsigned int, unsigned int);
+
 #endif /*_HOLBERTON_H_*/
