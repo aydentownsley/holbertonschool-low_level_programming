@@ -15,7 +15,7 @@
 int *array_range(int min, int max)
 {
 	int *ar;
-	int i, size;
+	int i = 0, size;
 
 	if (min > max)
 		return (NULL);
@@ -27,7 +27,7 @@ int *array_range(int min, int max)
 	if (ar == NULL)
 		return (NULL);
 	/* fills array with min to max */
-	for (i = 0; i <= size; i++)
+	for (; i < size; i++)
 	{
 		ar[i] = min;
 		++min;
