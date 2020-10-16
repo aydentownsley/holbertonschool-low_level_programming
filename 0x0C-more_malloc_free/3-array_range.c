@@ -21,7 +21,7 @@ int *array_range(int min, int max)
 		return (NULL);
 	/* acommodates for FULL range */
 	size = max - min + 1;
-	/* +1 for NULL byte */
+	
 	ar = malloc(sizeof(int) * (size));
 
 	if (ar == NULL)
