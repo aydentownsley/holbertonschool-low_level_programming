@@ -13,4 +13,7 @@ char *string_nconcat(char *, char *, unsigned int);
 /* Proto of _calloc */
 void *_calloc(unsigned int, unsigned int);
 
+/* Proto of array_range */
+int *array_range(int, int);
+
 #endif /*_HOLBERTON_H_*/
