@@ -7,12 +7,11 @@
  *
  * Return: Always 0.
  */
-
 int main(void)
 {
     char *concat;
 
-    concat = string_nconcat("Holberton " , "all", 32);
+    concat = string_nconcat("Holberton ", "School !!!", 6);
     printf("%s\n", concat);
     free(concat);
     return (0);
