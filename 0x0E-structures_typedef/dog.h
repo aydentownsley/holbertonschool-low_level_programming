@@ -19,7 +19,7 @@ struct dog
 };
 
 /* defining new type for dog */
-typedef dog dog_t;
+typedef struct dog dog_t;
 
 /* Prototype of init_dog */
 void init_dog(struct dog *, char *, float, char *);
