@@ -18,7 +18,7 @@ struct dog
 	char *owner;
 };
 
-/* defining new type for dog */
+/* define type of dog_t */
 typedef struct dog dog_t;
 
 /* Prototype of init_dog */
@@ -26,5 +26,8 @@ void init_dog(struct dog *, char *, float, char *);
 
 /* Prototype of print_dog */
 void print_dog(struct dog *);
+
+/* Prototype of new_dog */
+dog_t *new_dog(char *, float, char *);
 
 #endif
