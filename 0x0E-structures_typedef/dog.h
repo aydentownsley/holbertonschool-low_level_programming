@@ -30,4 +30,7 @@ void print_dog(struct dog *);
 /* Prototype of new_dog */
 dog_t *new_dog(char *, float, char *);
 
+/* Prototype of free_dog */
+void free_dog(dog_t *);
+
 #endif
