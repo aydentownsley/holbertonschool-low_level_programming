@@ -18,4 +18,10 @@ struct dog
 	char *owner;
 };
 
+/* Prototype of init_dog */
+void init_dog(struct dog *, char *, float, char *);
+
+/* Prototype of print_dog */
+void print_dog(struct dog *);
+
 #endif
