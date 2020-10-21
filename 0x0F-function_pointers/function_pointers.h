@@ -4,7 +4,10 @@
 /* Prototype of _putchar */
 int _putchar(char);
 
-/* Protorype of print_name */
+/* Prototype of print_name */
 void print_name(char *, void (*f)(char *));
+
+/* Prototype of array_iterator */
+void array_iterator(int *, size_t, void(*)(int));
 
 #endif /* _FUNCTION_POINTERS_H_ */
