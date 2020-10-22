@@ -12,11 +12,17 @@
 
 int main(int argc, char *argv[])
 {
+	int code;
+
 	if (argc != 2)
 	{
 		printf("Error\n");
 		exit(1);
 	}
+
+	code = atoi(argv[1]);
+
+	printf("%d\n", code);
 
 	return (0);
 }
