@@ -1,4 +1,5 @@
 #include "3-calc.h"
+#include <string.h>
 
 /**
  * main - performs math on two ints
@@ -20,10 +21,10 @@ int main(int argc, char *argv[])
 		printf("Error\n");
 		exit(98);
 	}
-	
+
 	/* exits if not a valid operator */
-	if (*argv[2] != '+' && *argv[2] != '-' && *argv[2] != '*' && *argv[2] != '/'  \
-	&& *argv[2] != '%')
+	if ((*argv[2] != '+' && *argv[2] != '-' && *argv[2] != '*' && *argv[2] != '/'
+	&& *argv[2] != '%') || strlen(argv[2]) != 1)
 	{
 		printf("Error\n");
 		exit(99);
