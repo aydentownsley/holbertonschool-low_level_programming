@@ -22,7 +22,5 @@ int main(int argc, char *argv[])
 
 	code = atoi(argv[1]);
 
-	printf("%d\n", code);
-
 	return (0);
 }
