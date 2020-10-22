@@ -10,4 +10,7 @@ void print_name(char *, void (*f)(char *));
 /* Prototype of array_iterator */
 void array_iterator(int *, size_t, void(*)(int));
 
+/* Prototype of int_index */
+int int_index(int *, int, int (*)(int));
+
 #endif /* _FUNCTION_POINTERS_H_ */
