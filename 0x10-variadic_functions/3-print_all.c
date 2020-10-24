@@ -12,7 +12,7 @@
 void print_all(const char * const format, ...)
 {
 	va_list ls;
-	char p, *ptr;
+	char *ptr;
 	int i = 0;
 
 	/* initiates the ls */
@@ -21,8 +21,7 @@ void print_all(const char * const format, ...)
 	/* interates through all elements of format */
 	while (format != NULL && format[i] != '\0')
 	{
-		p = format[i];
-		switch (p)
+		switch (format[i])
 		{
 			case 'c':
 				printf("%c", (char) va_arg(ls, int));
@@ -48,7 +47,7 @@ void print_all(const char * const format, ...)
 			printf(", ");
 		i++;
 	}
-	putchar(10);
+	printf("\n");
 
 	va_end(ls);
 }
