@@ -1,6 +1,6 @@
-    global    start
+    global    main
     section   .text
-start:
+main:
     mov       rax, 1
     mov       rdi, 1
     mov       rsi, message
