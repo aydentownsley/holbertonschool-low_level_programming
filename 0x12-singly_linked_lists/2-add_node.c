@@ -15,7 +15,7 @@ list_t *add_node(list_t **head, const char *str)
 	int length;
 	list_t *new;
 
-	for (length = 0; str[length] != NULL; length++)
+	for (length = 0; str[length] != '\0'; length++)
 		;
 
 	if (str == NULL)
