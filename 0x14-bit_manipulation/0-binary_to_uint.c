@@ -13,11 +13,11 @@
 
 unsigned int binary_to_uint(const char *b)
 {
-	unsigned int binary = atoi(b), decimal = 0, binval = 1;
+	unsigned int decimal = 0, binval = 1;
 	int i = 0;
 
 	if (b == NULL)
-		return (NULL);
+		return (0);
 
 	while (b[i] != '\0')
 	{
@@ -28,11 +28,12 @@ unsigned int binary_to_uint(const char *b)
 		}
 		++i;
 	}
+	--i;
 
-	while (binary > 0)
+	while (i >= 0)
 	{
-		decimal += (binary % 10) * binval;
-		binary = binary / 10;
+		decimal += ((b[i] - 48) % 10) * binval;
+		--i;
 		binval = binval * 2;
 	}
 
