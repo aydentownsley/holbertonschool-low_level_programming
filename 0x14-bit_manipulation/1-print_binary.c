@@ -1,7 +1,7 @@
 #include "holberton.h"
 
 /**
- * print-binary - prints the binary representation of a number
+ * print_binary - prints the binary representation of a number
  *
  * @n: input number
  *
