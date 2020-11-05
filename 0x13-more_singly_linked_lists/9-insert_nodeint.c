@@ -1,6 +1,27 @@
 #include "lists.h"
 
 /**
+ * listlength - gets length of linked list
+ *
+ * @h: head of list
+ *
+ * Return: length
+ */
+
+unsigned int listlength(listint_t *h)
+{
+	unsigned int length = 0;
+
+	while (h)
+	{
+		h = h->next;
+		++length;
+	}
+
+	return (length);
+}
+
+/**
  * insert_nodeint_at_index - inserts node into list at nth index
  *
  * @head: head of list
@@ -19,25 +40,25 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 	new = malloc(sizeof(listint_t));
 
 	if (new == NULL || current == NULL)
-		return (NULL);
-
-	while (current)
 	{
-		current = current->next;
-		++listlen;
+		free(new);
+		return (NULL);
 	}
+	listlen = listlength(current);
 
 	if (idx >= listlen)
 		return (NULL);
-
 	current = *head;
+
 	while (current && itr < idx)
 	{
 		current = current->next;
 		++itr;
 	}
-
-	new->n = n;
+	if (n)
+		new->n = n;
+	else
+		return (NULL);
 	if (idx != 0)
 	{
 		new->next = current->next;
@@ -48,8 +69,6 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 		new->next = current;
 		*head = new;
 	}
-	if (new == NULL)
-		return (NULL);
 
 	return (new);
 }
