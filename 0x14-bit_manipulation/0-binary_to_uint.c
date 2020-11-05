@@ -5,7 +5,7 @@
  *
  * @b: a string of 1s and 0s
  *
- * Retrun: UNSIGNED INT conversion
+ * Return: UNSIGNED INT conversion
  * OR 0 if string contains chars other
  * that 1 and 0
  * OR b is NULL
@@ -16,6 +16,9 @@ unsigned int binary_to_uint(const char *b)
 	unsigned int binary = atoi(b), decimal = 0, binval = 1;
 	int i = 0;
 
+	if (b == NULL)
+		return (NULL);
+
 	while (b[i] != '\0')
 	{
 		if (b[i] != '1' && b[i] != '0')
@@ -25,6 +28,7 @@ unsigned int binary_to_uint(const char *b)
 		}
 		++i;
 	}
+
 	while (binary > 0)
 	{
 		decimal += (binary % 10) * binval;
