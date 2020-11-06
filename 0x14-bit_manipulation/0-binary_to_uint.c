@@ -37,9 +37,5 @@ unsigned int binary_to_uint(const char *b)
 		binval = binval * 2;
 	}
 
-	while ((b >> 1) != 0)
-	{
-		printf("b >> 1: %d\n", b >> 1);
-	}
 	return (decimal);
 }
