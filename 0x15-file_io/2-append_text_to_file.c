@@ -29,11 +29,9 @@ int append_text_to_file(const char *filename, char *text_content)
 	/* get textlen */
 	if (text_content == NULL)
 		return (1);
-	else
-	{
-		for (i = 0; text_content[i]; ++i, ++textlen)
-			;
-	}
+
+	for (i = 0; text_content[i]; ++i, ++textlen)
+		;
 
 	/* append needed text, if text is NULL return 1 and close */
 	wr = write(fd, text_content, textlen);
