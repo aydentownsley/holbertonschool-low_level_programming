@@ -83,6 +83,8 @@ int main(int argc, char *argv[])
 	if (rdsource == -1)
 	{
 		dprintf(2, "Error: Can't read from file %s\n", argv[1]);
+		cl(fsource);
+		cl(fdest);
 		exit(98);
 	}
 
