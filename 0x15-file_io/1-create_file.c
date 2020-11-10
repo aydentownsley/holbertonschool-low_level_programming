@@ -12,10 +12,8 @@
 
 int create_file(const char *filename, char *text_content)
 {
-	/* initiate variables*/
 	int fd, wr, i, textlen = 0;
 
-	/* get length of text */
 	if (text_content == NULL)
 		textlen = 0;
 	else
@@ -24,21 +22,17 @@ int create_file(const char *filename, char *text_content)
 			;
 	}
 
-	/* "open" file to create if doesnt exist */
-	fd = open(filename, O_CREAT | O_WRONLY, 0600);
+	fd = open(filename, O_CREAT | O_TRUNC | O_WRONLY, 0600);
 
 	if (fd == -1)
 		return (-1);
 
-	/* write text into created file */
 	wr = write(fd, text_content, textlen);
 
 	if (wr == -1)
 		return (-1);
 
-	/* close file */
 	close(fd);
 
-	/* return 1 */
 	return (1);
 }
