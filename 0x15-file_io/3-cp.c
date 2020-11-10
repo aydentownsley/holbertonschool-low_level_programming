@@ -61,7 +61,7 @@ void cl(int filedes)
 
 int main(int argc, char *argv[])
 {
-	int fsource, fdest, rdsource, wrdest;
+	int fsource, fdest, rdsource = 1024, wrdest;
 	char *buffer[1024];
 
 	if (argc != 3)
@@ -79,20 +79,21 @@ int main(int argc, char *argv[])
 		exit(99);
 	}
 
-	rdsource = read(fsource, buffer, 1024);
-	if (rdsource == -1)
+	while (rdsource == 1024)
 	{
-		dprintf(2, "Error: Can't read from file %s\n", argv[1]);
-		cl(fsource);
-		cl(fdest);
-		exit(98);
-	}
+		rdsource = read(fsource, buffer, 1024);
+		if (rdsource == -1)
+		{
+			dprintf(2, "Error: Can't read from file %s\n", argv[1]);
+			exit(98);
+		}
 
-	wrdest = write(fdest, buffer, rdsource);
-	if (wrdest == -1)
-	{
-		dprintf(2, "Error: Can't write to %s\n", argv[2]);
-		exit(99);
+		wrdest = write(fdest, buffer, rdsource);
+		if (wrdest == -1)
+		{
+			dprintf(2, "Error: Can't write to %s\n", argv[2]);
+			exit(99);
+		}
 	}
 
 	close(fsource);
