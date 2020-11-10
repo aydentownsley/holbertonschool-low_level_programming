@@ -36,6 +36,9 @@ ssize_t read_textfile(const char *filename, size_t letters)
 
 	charcount = write(1, buffer, rd);
 
+	if (charcount == -1 || charcount != rd)
+		return (0);
+
 	close(fd);
 	free(buffer);
 
