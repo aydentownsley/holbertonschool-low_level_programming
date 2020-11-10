@@ -1,6 +1,50 @@
 #include "holberton.h"
 
 /**
+ * op - opens files
+ *
+ * @arg: argument from varg
+ *
+ * Return: -1 if fail
+ * OR low positive int if success
+ */
+
+int op(char *arg)
+{
+	int file;
+
+	file = open(arg, O_RDONLY);
+
+	if (file == -1)
+	{
+		dprintf(2, "Error: Can't read from file %s\n", arg);
+		exit(98);
+	}
+
+	return (file);
+}
+
+/**
+ * cl - closes files
+ *
+ * @filedes: file designator
+ *
+ * Return: -1 if fail
+ * OR low positive int if success
+ */
+
+void cl(int filedes)
+{
+	close(filedes);
+
+	if (filedes == -1)
+	{
+		dprintf(2, "Error: Can't close fd %d\n", filedes);
+		exit(100);
+	}
+}
+
+/**
  * main - copies contents of one file to another
  *
  * @argv: array of args
@@ -17,66 +61,40 @@
 
 int main(int argc, char *argv[])
 {
-	/* initiate variable */
-	int fd, fd2, rd, wr, cl, cl2;
+	int fsource, fdest, rdsource, wrdest;
 	char *buffer[1024];
 
-	/* check argc, exit 97 */
 	if (argc != 3)
 	{
 		dprintf(2, "Usage: cp file_from file_to\n");
 		exit(97);
 	}
 
-	/* open file varg[1] and read, fail: exit 98 and print */
-	fd = open(argv[1], O_RDONLY);
+	fsource = op(argv[1]);
 
-	if (fd == -1)
-	{
-		dprintf(2, "Error: Can't read from file %s\n", argv[1]);
-		exit(98);
-	}
-
-	rd = read(fd, buffer, 1024);
-
-	if (rd == -1)
-	{
-		dprintf(2, "Error: Can't read from file %s\n", argv[1]);
-		exit(98);
-	}
-
-	/* write to dest or create dest, fail: exit 99 and print */
-	fd2 = open(argv[2], O_WRONLY | O_CREAT, 0664);
-
-	if (fd2 == -1)
+	fdest = open(argv[2], O_WRONLY | O_TRUNC | O_CREAT, 0664);
+	if (fdest == -1)
 	{
 		dprintf(2, "Error: Can't write to %s\n", argv[2]);
 		exit(99);
 	}
 
-	wr = write(fd2, buffer, rd);
+	rdsource = read(fsource, buffer, 1024);
+	if (rdsource == -1)
+	{
+		dprintf(2, "Error: Can't read from file %s\n", argv[1]);
+		exit(98);
+	}
 
-	if (wr == -1)
+	wrdest = write(fdest, buffer, rdsource);
+	if (wrdest == -1)
 	{
 		dprintf(2, "Error: Can't write to %s\n", argv[2]);
 		exit(99);
 	}
 
-	/* close file, fail: exit 100 and print */
-	cl = close(fd);
-	cl2 = close(fd2);
-
-	if (cl == -1)
-	{
-		dprintf(2, "Error: Can't close fd %d\n", fd);
-		exit(100);
-	}
-
-        if (cl2 == -1)
-        {
-                dprintf(2, "Error: Can't close fd %d\n", fd2);
-                exit(100);
-        }
+	close(fsource);
+	close(fdest);
 
 	return (0);
 }
