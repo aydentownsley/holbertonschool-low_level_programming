@@ -35,7 +35,7 @@ unsigned int listlength(dlistint_t *h)
 dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 {
 	dlistint_t *new, *cursor = *h;
-	unsigned int itr = 0;
+	unsigned int itr = 1;
 
 	new = malloc(sizeof(dlistint_t));
 
