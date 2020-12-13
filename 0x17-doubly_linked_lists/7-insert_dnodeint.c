@@ -34,39 +34,34 @@ unsigned int listlength(dlistint_t *h)
 
 dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 {
-	dlistint_t *new, *current = *h;
-	unsigned int itr = 1, listlen = 0;
+	dlistint_t *new, *cursor = *h;
+	unsigned int itr = 0;
 
 	new = malloc(sizeof(dlistint_t));
-	if (new == NULL || current == NULL)
-	{
-		free(new);
+
+	if (new == NULL)
 		return (NULL);
-	}
-	listlen = listlength(current);
-	if (idx >= listlen + 1)
-	{
-		free(new);
-		return (NULL);
-	}
-	current = *h;
-	while (current && itr < idx)
-	{
-		current = current->next;
-		++itr;
-	}
 	new->n = n;
-	if (idx != 0)
+	printf("listlen: %d\n", listlength(cursor));
+	if (idx >= listlength(cursor))
+		return (NULL);
+	cursor = *h;
+	while (h && itr < idx)
 	{
-		new->next = current->next;
-		current->next = new;
-		new->prev = current;
+		cursor = cursor->next;
+		itr++;
+	}
+	if (idx == 0)
+	{
+		new->next = cursor;
+		new->prev = *h;
+		*h = new;
 	}
 	else
 	{
-		new->next = current;
-		new->prev = NULL;
-		*h = new;
+		new->next = cursor->next;
+		cursor->next = new;
+		new->prev = cursor;
 	}
 
 	return (new);
