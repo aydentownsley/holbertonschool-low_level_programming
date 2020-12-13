@@ -10,7 +10,7 @@
 
 unsigned int listlength(dlistint_t *h)
 {
-	unsigned int length = 0;
+	unsigned int length = -1;
 
 	while (h)
 	{
@@ -42,8 +42,7 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 	if (new == NULL)
 		return (NULL);
 	new->n = n;
-	printf("listlen: %d\n", listlength(cursor));
-	if (idx >= listlength(cursor))
+	if (idx > listlength(cursor) + 1)
 		return (NULL);
 	cursor = *h;
 	while (h && itr < idx)
