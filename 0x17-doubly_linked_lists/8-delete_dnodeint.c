@@ -10,15 +10,15 @@
 
 unsigned int listlength(dlistint_t *h)
 {
-        unsigned int length = -1;
+	unsigned int length = -1;
 
-        while (h)
-        {
-                h = h->next;
-                ++length;
-        }
+	while (h)
+	{
+		h = h->next;
+		++length;
+	}
 
-        return (length);
+	return (length);
 }
 
 /**
@@ -54,5 +54,7 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 		cursor->prev->next = cursor->next;
 		cursor->next->prev = cursor->prev;
 	}
+
+	free(cursor);
 	return (1);
 }
