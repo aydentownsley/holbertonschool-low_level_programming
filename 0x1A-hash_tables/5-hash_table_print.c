@@ -23,7 +23,7 @@ void hash_table_print(const hash_table_t *ht)
 	{
 		if (flip == 0)
 			printf(", ");
-		printf(" '%s': '%s'", curr->key, curr->value);
+		printf("\ '%s\': \'%s\'", curr->key, curr->value);
 		flip = 0;
 	}
 	printf("}\n");
