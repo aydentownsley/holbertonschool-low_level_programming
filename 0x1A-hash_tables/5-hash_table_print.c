@@ -21,10 +21,13 @@ void hash_table_print(const hash_table_t *ht)
 	printf("{");
 	for (; counter < ht->size; counter++)
 	{
-		if (flip == 0)
-			printf(", ");
-		printf("\ '%s\': \'%s\'", curr->key, curr->value);
-		flip = 0;
+		for (curr = bin[counter]; curr != NULL; curr = curr->next)
+		{
+			if (flip == 0)
+				printf(", ");
+			printf("\ '%s\': \'%s\'", curr->key, curr->value);
+			flip = 0;
+		}
 	}
 	printf("}\n");
 }
