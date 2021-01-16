@@ -22,7 +22,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	bin = ht->array;
 	for (curr = bin[counter]; curr != NULL; curr = curr->next)
 	{
-		if (strcmp(curr->key, key) == 0)
+		if (!(strcmp(curr->key, key)))
 		{
 			free(curr->value);
 			curr->value = strdup(value);
