@@ -9,7 +9,7 @@
 
 void hash_table_print(const hash_table_t *ht)
 {
-	hash_node_t *curr;
+	hash_node_t *curr = NULL;
 	hash_node_t **bin;
 	unsigned long int counter = 0, flip = 1;
 
