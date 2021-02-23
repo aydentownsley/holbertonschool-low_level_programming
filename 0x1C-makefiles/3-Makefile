@@ -14,7 +14,7 @@ re: ofileclean all
 clean:
 	$(RM) *~ $(NAME)
 
-ofileclean:
+oclean:
 	$(RM) $(OBJ)
 
-fclean: clean ofileclean
+fclean: clean oclean
