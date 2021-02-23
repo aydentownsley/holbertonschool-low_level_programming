@@ -9,7 +9,7 @@ all: $(OBJ)
 
 $(OBJ): %.o: %.c
 
-re: ofileclean all
+re: oclean all
 
 clean:
 	$(RM) *~ $(NAME)
