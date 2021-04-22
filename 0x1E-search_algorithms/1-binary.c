@@ -4,38 +4,29 @@
 #include <ctype.h>
 
 /**
- * help - engine that allows extra pass for recursive
+ * print_array - prints array (or section of) being searched
  *
- * @array: array to be searched
- * @high: high value
- * @low: low value
- * @value: value to be searched for
+ * @size: size of array
+ * @array: array
  *
- * Return: index or -1
+ * Return: None
  */
-int help(int *array, unsigned int high, unsigned int low, int value)
+
+void print_array(int *array, size_t size)
 {
-	unsigned int i = low, mid = (high + low) / 2;
+	unsigned int i;
 
-	if (low > high)
-		return (-1);
+	if (size == 0)
+		return;
 
-	printf("searching in array: ");
-	while (i <= high)
+	printf("Searching in array: ");
+	for (i = 0; i < size; i++)
 	{
-		if (i == high)
+		if (i == size - 1)
 			printf("%d\n", array[i]);
 		else
 			printf("%d, ", array[i]);
-		i++;
 	}
-
-	if (array[mid] == value)
-		return (mid);
-	if (array[mid] > value)
-		return (help(array, mid - 1, low, value));
-	else
-		return (help(array, high, mid + 1, value));
 }
 
 /**
@@ -52,8 +43,32 @@ int help(int *array, unsigned int high, unsigned int low, int value)
 
 int binary_search(int *array, size_t size, int value)
 {
+	unsigned int high = 0, mid = 0, low = 0;
+
 	if (array == NULL || size == 0)
 		return (-1);
 
-	return (help(array, size - 1, 0, value));
+	high = size - 1;
+
+	print_array(array, size);
+
+	while (low <= high)
+	{
+		mid = (high + low) / 2;
+
+		if (array[mid] == value)
+			return (mid);
+		else if (array[mid] > value)
+		{
+			high = mid - 1;
+			print_array(&array[high], mid - low);
+		}
+		else if (array[mid] < value)
+		{
+			print_array(&array[mid + 1], high - mid);
+			low = mid + 1;
+		}
+	}
+
+	return (-1);
 }
